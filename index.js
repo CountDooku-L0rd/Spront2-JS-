@@ -36,7 +36,7 @@ const income = 100000
 const creditScore = 850
 const isExistingCustomer = false
 
-if ((age>=21 && creditScore>=650 && income>=50000) || (isExistingCustomer===true && creditScore>=650 && age>=18 && income>=50000) || (income>=100000 && creditScore>=850)){
+if ((age>=21 && creditScore>=650 && income>=50000) || (isExistingCustomer===true && creditScore>=650 && age>=18 && income>=50000) || (income>=100000) || (creditScore===850)){
     console.log("Кредит одобрен")
 } else{
     console.log("Кредит не одобрен")
