@@ -1,34 +1,18 @@
 //1
 function stringReverse(str) {
-    let resStr = '';
-    for (let i = str.length - 1; i >= 0; i--) {
-        resStr += str.charAt(i);
-    }
-    return resStr;
+    return str.split('').reverse().join('')
 }
 
 function arraySqr(arr) {
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        newArr[i] = arr[i]*arr[i];
-    }
-    return newArr;
+    return arr.map(function (num) {return num*num})
 }
 
 function sumCost(arr){
-    let res = 0;
-    for (let i = 0; i < arr.length; i++) {
-        res += arr[i].price * arr[i].count;
-    }
-    return res;
+    return arr.reduce(function (sum, currentProduct) {return sum+ currentProduct.price*currentProduct.count;}, 0);
 }
 
 function evenOrOdd(num){
-    if (num%2===0){
-        return 'Even'
-    } else{
-        return 'Odd';
-    }
+    return (num%2===0) ? 'Even' : 'Odd'
 }
 const arr = [2,4,5,7]
 const str = 'Hello World'
