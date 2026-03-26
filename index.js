@@ -4,17 +4,20 @@ function stringReverse(str) {
 }
 
 function arraySqr(arr) {
-    return arr.map(function (num) {return num*num})
+    return arr.map(num => num ** 2)
 }
 
-function sumCost(arr){
-    return arr.reduce(function (sum, currentProduct) {return sum+ currentProduct.price*currentProduct.count;}, 0);
+function sumCost(arr) {
+    return arr.reduce(function (sum, currentProduct) {
+        return sum + currentProduct.price * currentProduct.count;
+    }, 0);
 }
 
-function evenOrOdd(num){
-    return (num%2===0) ? 'Even' : 'Odd'
+function evenOrOdd(num) {
+    return (num % 2 === 0) ? 'Even' : 'Odd'
 }
-const arr = [2,4,5,7]
+
+const arr = [2, 4, 5, 7]
 const str = 'Hello World'
 const objectsArr = [
     {name: 'Щётка', price: 300, count: 5},
@@ -36,8 +39,8 @@ const income = 100000
 const creditScore = 850
 const isExistingCustomer = false
 
-if ((age>=21 && creditScore>=650 && income>=50000) || (isExistingCustomer===true && creditScore>=650 && age>=18 && income>=50000) || (income>=100000) || (creditScore===850)){
+if ((age >= 21 && creditScore >= 650 && income >= 50000) || (isExistingCustomer === true && creditScore >= 650 && age >= 18 && income >= 50000) || (income >= 100000) || (creditScore === 850)) {
     console.log("Кредит одобрен")
-} else{
+} else {
     console.log("Кредит не одобрен")
 }
